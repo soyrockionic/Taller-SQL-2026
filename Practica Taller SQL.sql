@@ -116,8 +116,7 @@ FROM jugadores_destacados j
 INNER JOIN estadisticas_mundial e ON j.equipo = e.equipo;
 
 
--- "Muestra el nombre del jugador, su valor de mercado, y los goles anotados por su seleccion, pero
- solo para jugadores que sean capitanes."
+-- "Muestra el nombre del jugador, su valor de mercado, y los goles anotados por su seleccion, pero solo para jugadores que sean capitanes."
 
 SELECT j.nombre, j.valor_mercado_millones,
        e.goles_anotados AS Goles_de_su_seleccion
@@ -126,8 +125,8 @@ INNER JOIN estadisticas_mundial e ON j.equipo = e.equipo
 WHERE j.es_capitan = TRUE;
 
 
--- "Muestra la confederacion y el promedio de valor de mercado de los jugadores destacados de sus
-  selecciones, pero solo para confederaciones cuyo promedio supere los 30 millones."
+-- "Muestra la confederacion y el promedio de valor de mercado de los jugadores destacados de sus 
+  -- selecciones, pero solo para confederaciones cuyo promedio supere los 30 millones."
 
 SELECT e.confederacion, AVG(j.valor_mercado_millones)
 FROM estadisticas_mundial e
@@ -136,8 +135,7 @@ GROUP BY e.confederacion
 HAVING AVG(j.valor_mercado_millones) > 30;
 
 
--- "Muestra nombre del jugador, equipo, y goles anotados del equipo, para jugadores de valor mayor
-  a 30 millones"
+-- "Muestra nombre del jugador, equipo, y goles anotados del equipo, para jugadores de valor mayor a 30 millones"
 
 SELECT j.nombre, j.equipo, e.goles_anotados AS goles_anotados_equipo
 FROM jugadores_destacados AS j
