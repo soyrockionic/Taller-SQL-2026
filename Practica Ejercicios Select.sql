@@ -33,6 +33,7 @@ INSERT INTO productos_tienda (id_producto, nombre, categoria, precio, costo, sto
 (19, 'Kit Herramientas Bonsái', 'Accesorios', 22000.00, 11000.00, 4, '2026-06-15', 'PROV-TOOL'),
 (20, 'Aceite de Neem 100ml', 'Insumos', 4200.00, 1800.00, 75, '2026-03-22', 'PROV-MATE');
 
+
 CREATE TABLE ordenes_envio (
   id_orden INT,
   cliente VARCHAR(50),
