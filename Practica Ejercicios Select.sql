@@ -113,14 +113,17 @@ FROM ordenes_envio
 WHERE fecha_entrega IS NOT NULL AND monto_total > 15000;
 
 
--- Calcular el valor de venta total potencial de cada producto multiplicando el precio por el stock actual. Llamar a la columna resultante 'valor_potencial'.
+-- Calcular el valor de venta total potencial de cada producto multiplicando el precio por el stock actual.
+-- Llamar a la columna resultante 'valor_potencial'.
 
 SELECT nombre, 
        (precio * stock) AS valor_potencial 
 FROM productos_tienda;
 
 
--- Determinar el margen de ganancia porcentual de cada producto. La formula es '((precio - costo) / costo) * 100'. Nombrar la columna 'margen_porcentual'.
+-- Determinar el margen de ganancia porcentual de cada producto.
+-- La formula es '((precio - costo) / costo) * 100'.
+-- Nombrar la columna 'margen_porcentual'.
 
 SELECT nombre, 
        ((precio - costo) / costo) * 100 AS margen_porcentual 
