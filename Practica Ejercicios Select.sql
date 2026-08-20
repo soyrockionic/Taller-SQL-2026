@@ -66,12 +66,6 @@ INSERT INTO ordenes_envio (id_orden, cliente, fecha_pedido, monto_total, peso_gr
 
 -- ================================== Querys =====================================
 
--- Obtener todos los datos de los productos que pertenezcan a la categoria 'Plantas'.
-
-SELECT * FROM productos_tienda 
-WHERE categoria = 'Plantas';
-
-
 -- Mostrar el nombre y el precio de los productos cuyo precio sea mayor o igual a 10000.
 
 SELECT nombre, precio 
